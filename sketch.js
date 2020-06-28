@@ -52,7 +52,7 @@ function draw() {
 
   // Draw the label
   fill(255);
-  textSize(40);
+  textSize(32);
   textAlign(CENTER);
   text(label, width / 2, height - 4);
 }
