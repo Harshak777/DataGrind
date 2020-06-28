@@ -26,15 +26,23 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(320, 260);
+  var btn = document.getElementById('camera');
+  btn.addEventListener('click', activate);
+
+  createCanvas(720, 512);
   // Create the video
   video = createCapture(VIDEO);
-  video.size(320, 240);
+  video.size(720, 495);
   video.hide();
 
   flippedVideo = ml5.flipImage(video);
   // Start classifying
+
+  //draw function
+
   classifyVideo();
+
+  function activate() {}
 }
 
 function draw() {
